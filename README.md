@@ -31,3 +31,8 @@ This project is a desktop application for playing popular Dixit multiplayer game
 - RMI used for in game chat communication
 - Responsive UI implemented using threads
 - Using SAX/DOM parser to save configuration and game data in XML format and reading data to perform game replay
+
+## How to run this project
+
+- Run Server and ChatServer
+- After that, run StartScreenController per player count
