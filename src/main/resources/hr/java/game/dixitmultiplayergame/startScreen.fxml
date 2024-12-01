@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.game.dixitmultiplayergame.client.StartScreenController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../icons/background.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <Label layoutX="210.0" layoutY="40.0" text="Welcome to dixit!" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="94.0" text="Please enter your name:" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldPlayerName" layoutX="227.0" layoutY="129.0" />
+      <Button layoutX="227.0" layoutY="229.0" minHeight="25.0" minWidth="150.0" mnemonicParsing="false" onAction="#joinGame" text="Join game">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="224.0" layoutY="300.0" mnemonicParsing="false" onAction="#generateHtmlDocumentation" text="Generate Documentation">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <MenuBar layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadGameFromFile" text="Load" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <CheckBox fx:id="singleplayer" alignment="CENTER" layoutX="227.0" layoutY="166.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="35.0" prefWidth="150.0" text="Singleplayer" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

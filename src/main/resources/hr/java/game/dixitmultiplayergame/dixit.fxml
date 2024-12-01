@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="960.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.game.dixitmultiplayergame.client.DixitController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <AnchorPane fx:id="anchorPane" prefHeight="777.0" prefWidth="958.0">
+            <children>
+            <ImageView fitHeight="767.0" fitWidth="932.0" layoutX="-7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../icons/background.jpg" />
+               </image>
+               <effect>
+                  <GaussianBlur />
+               </effect>
+            </ImageView>
+                <TextField fx:id="chatMessageTextField" focusTraversable="false" layoutX="720.0" layoutY="547.0" maxWidth="130.0" prefHeight="25.0" prefWidth="116.0" promptText="Click to chat!" AnchorPane.bottomAnchor="189.0" AnchorPane.rightAnchor="80.0" />
+                <TextArea fx:id="chatTextArea" editable="false" layoutX="725.0" layoutY="369.0" opacity="0.5" prefHeight="169.0" prefWidth="183.0" AnchorPane.bottomAnchor="223.0" AnchorPane.rightAnchor="13.0" />
+                <Button focusTraversable="false" layoutX="841.0" layoutY="547.0" mnemonicParsing="false" onAction="#sendChatMessage" prefHeight="25.0" prefWidth="63.0" text="Send" textAlignment="CENTER" AnchorPane.bottomAnchor="189.0" AnchorPane.rightAnchor="12.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Pane fx:id="defaultPane6" layoutX="725.0" layoutY="168.0" prefHeight="190.0" prefWidth="191.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" rotate="-12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="36.0" layoutY="10.0" pickOnBounds="true" rotate="-7.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="54.0" layoutY="9.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="71.0" layoutY="8.0" pickOnBounds="true" rotate="2.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="87.0" layoutY="9.0" pickOnBounds="true" rotate="9.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="110.0" layoutY="11.0" pickOnBounds="true" rotate="12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" height="78.0" layoutX="16.0" layoutY="34.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="156.0" />
+                  <Text fx:id="defaultPlayer6" fill="#2168e4" layoutX="38.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player6" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pointsPlayer6" fill="WHITE" layoutX="39.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/10" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="arrow6" fitHeight="36.0" fitWidth="30.0" layoutX="78.0" layoutY="154.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@../../../../icons/arrow_up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fx:id="chosenCard2" fitHeight="175.0" fitWidth="79.0" layoutX="280.0" layoutY="298.0" onMouseClicked="#selectCardEffect" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@../../../../icons/card0.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="chosenCard3" fitHeight="175.0" fitWidth="79.0" layoutX="369.0" layoutY="298.0" onMouseClicked="#selectCardEffect" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@../../../../icons/card0.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="chosenCard4" fitHeight="175.0" fitWidth="79.0" layoutX="458.0" layoutY="298.0" onMouseClicked="#selectCardEffect" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@../../../../icons/card0.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="chosenCard5" fitHeight="175.0" fitWidth="79.0" layoutX="547.0" layoutY="298.0" onMouseClicked="#selectCardEffect" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@../../../../icons/card0.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="chosenCard6" fitHeight="175.0" fitWidth="79.0" layoutX="636.0" layoutY="298.0" onMouseClicked="#selectCardEffect" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@../../../../icons/card0.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="chosenCard1" fitHeight="175.0" fitWidth="79.0" layoutX="190.0" layoutY="298.0" onMouseClicked="#selectCardEffect" pickOnBounds="true" visible="false">
+               <image>
+                  <Image url="@../../../../icons/card0.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Pane fx:id="defaultPane5" layoutX="565.0" layoutY="53.0" prefHeight="190.0" prefWidth="191.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" rotate="-12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="36.0" layoutY="10.0" pickOnBounds="true" rotate="-7.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="54.0" layoutY="9.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="71.0" layoutY="8.0" pickOnBounds="true" rotate="2.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="87.0" layoutY="9.0" pickOnBounds="true" rotate="9.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="110.0" layoutY="11.0" pickOnBounds="true" rotate="12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" height="78.0" layoutX="16.0" layoutY="34.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="156.0" />
+                  <Text fx:id="defaultPlayer5" fill="#2168e4" layoutX="38.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player5" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pointsPlayer5" fill="WHITE" layoutX="39.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/10" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="arrow5" fitHeight="36.0" fitWidth="30.0" layoutX="81.0" layoutY="154.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@../../../../icons/arrow_up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="defaultPaneCards" layoutX="190.0" layoutY="532.0">
+               <children>
+                  <ImageView fx:id="playerCard2" fitHeight="175.0" fitWidth="79.0" layoutX="90.0" onMouseClicked="#selectCardEffect" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="playerCard3" fitHeight="175.0" fitWidth="79.0" layoutX="179.0" onMouseClicked="#selectCardEffect" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="playerCard4" fitHeight="175.0" fitWidth="79.0" layoutX="268.0" onMouseClicked="#selectCardEffect" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="playerCard5" fitHeight="175.0" fitWidth="79.0" layoutX="357.0" onMouseClicked="#selectCardEffect" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="playerCard6" fitHeight="175.0" fitWidth="79.0" layoutX="446.0" onMouseClicked="#selectCardEffect" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="playerCard1" fitHeight="175.0" fitWidth="79.0" onMouseClicked="#selectCardEffect" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Line endX="440.0" layoutX="279.0" layoutY="289.0" startX="-95.0" stroke="WHITE" />
+            <Line endX="440.0" layoutX="280.0" layoutY="483.0" startX="-95.0" stroke="WHITE" />
+            <Line endX="3.5" endY="97.0" layoutX="181.0" layoutY="386.0" startX="3.0" startY="-97.0" stroke="WHITE" />
+            <Line endX="3.5" endY="97.0" layoutX="717.0" layoutY="386.0" startX="3.0" startY="-97.0" stroke="WHITE" />
+            <Line endX="3.5" endY="97.0" layoutX="271.0" layoutY="385.0" startX="3.5" startY="-95.0" stroke="WHITE" />
+            <Line endX="3.5" endY="98.0" layoutX="361.0" layoutY="384.0" startX="3.5" startY="-95.0" stroke="WHITE" />
+            <Line endX="3.5" endY="98.0" layoutX="449.0" layoutY="384.0" startX="3.5" startY="-95.0" stroke="WHITE" />
+            <Line endX="3.5" endY="98.0" layoutX="538.0" layoutY="384.0" startX="3.5" startY="-95.0" stroke="WHITE" />
+            <Line endX="3.5" endY="99.0" layoutX="627.0" layoutY="383.0" startX="3.5" startY="-93.0" stroke="WHITE" />
+            <Pane fx:id="defaultPane4" layoutX="362.0" layoutY="13.0" prefHeight="190.0" prefWidth="191.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" rotate="-12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="36.0" layoutY="10.0" pickOnBounds="true" rotate="-7.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="54.0" layoutY="9.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="71.0" layoutY="8.0" pickOnBounds="true" rotate="2.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="87.0" layoutY="9.0" pickOnBounds="true" rotate="9.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="110.0" layoutY="11.0" pickOnBounds="true" rotate="12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" height="78.0" layoutX="16.0" layoutY="34.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="156.0" />
+                  <Text fx:id="defaultPlayer4" fill="#2168e4" layoutX="38.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player4" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pointsPlayer4" fill="WHITE" layoutX="39.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/10" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="arrow4" fitHeight="36.0" fitWidth="30.0" layoutX="79.0" layoutY="151.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@../../../../icons/arrow_up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="defaultPane3" layoutX="156.0" layoutY="53.0" prefHeight="190.0" prefWidth="191.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" rotate="-12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="36.0" layoutY="10.0" pickOnBounds="true" rotate="-7.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="54.0" layoutY="9.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="71.0" layoutY="8.0" pickOnBounds="true" rotate="2.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="87.0" layoutY="9.0" pickOnBounds="true" rotate="9.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="110.0" layoutY="11.0" pickOnBounds="true" rotate="12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" height="78.0" layoutX="16.0" layoutY="34.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="156.0" />
+                  <Text fx:id="defaultPlayer3" fill="#2168e4" layoutX="38.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player3" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pointsPlayer3" fill="WHITE" layoutX="39.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/10" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="arrow3" fitHeight="36.0" fitWidth="30.0" layoutX="82.0" layoutY="149.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@../../../../icons/arrow_up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="defaultPane2" layoutY="168.0" prefHeight="190.0" prefWidth="175.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" rotate="-12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="36.0" layoutY="10.0" pickOnBounds="true" rotate="-7.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="54.0" layoutY="9.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="71.0" layoutY="8.0" pickOnBounds="true" rotate="2.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="87.0" layoutY="9.0" pickOnBounds="true" rotate="9.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="90.0" fitWidth="52.0" layoutX="110.0" layoutY="11.0" pickOnBounds="true" rotate="12.0">
+                     <image>
+                        <Image url="@../../../../icons/card0.jpg" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" height="78.0" layoutX="16.0" layoutY="34.0" opacity="0.65" stroke="BLACK" strokeType="INSIDE" width="156.0" />
+                  <Text fx:id="defaultPlayer2" fill="#2168e4" layoutX="38.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player2" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pointsPlayer2" fill="WHITE" layoutX="39.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0/10" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="arrow2" fitHeight="36.0" fitWidth="30.0" layoutX="81.0" layoutY="150.0" pickOnBounds="true" visible="false">
+                     <image>
+                        <Image url="@../../../../icons/arrow_up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="defaultPane1" layoutX="733.0" layoutY="609.0" prefHeight="92.0" prefWidth="175.0">
+               <children>
+                  <Text fx:id="defaultPlayer1" fill="#2168e4" layoutY="5.892578125" strokeType="OUTSIDE" strokeWidth="0.0" text="Player1" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pointsPlayer1" fill="WHITE" layoutY="38.892578125" strokeType="OUTSIDE" strokeWidth="0.0" text="0/10" textAlignment="CENTER" wrappingWidth="116.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="arrow1" fitHeight="36.0" fitWidth="30.0" layoutX="128.0" layoutY="-18.0" pickOnBounds="true" rotate="-90.0" visible="false">
+                     <image>
+                        <Image url="@../../../../icons/arrow_up.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="defaultStorytellerPane" layoutX="16.0" layoutY="496.78515625">
+               <children>
+                  <TextArea fx:id="cardDescription" disable="true" focusTraversable="false" layoutY="57.21484375" opacity="0.5" prefHeight="116.0" prefWidth="161.0" wrapText="true" />
+                  <Text fx:id="cardDescriptionText" disable="true" fill="WHITE" layoutX="3.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card description:" textAlignment="CENTER" wrappingWidth="156.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="28.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Storyteller:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="storytellerUsername" fill="WHITE" layoutX="110.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="submitButton" disable="true" focusTraversable="false" layoutX="413.0" layoutY="722.0" minHeight="25.0" minWidth="92.0" mnemonicParsing="false" onAction="#submitCard" text="Submit" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Text fx:id="chooseCardText" fill="WHITE" layoutX="406.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a card" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="chooseCardButton" disable="true" focusTraversable="false" layoutX="407.0" layoutY="497.0" mnemonicParsing="false" onAction="#chooseCard" text="Choose a card" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ImageView fx:id="hoveredCard" fitHeight="614.0" fitWidth="307.0" layoutX="298.0" layoutY="68.0" pickOnBounds="true">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <Text fx:id="storytellerCardText" fill="WHITE" layoutX="8.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Storyteller's card was:" visible="false">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+            <MenuBar layoutY="2.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#saveToFile" text="Save" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="lastGameMoveLabel" layoutX="243.0" layoutY="195.0" prefHeight="78.0" prefWidth="430.0" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="singleplayerButton" layoutX="390.0" layoutY="722.0" mnemonicParsing="false" onAction="#submitSingleplayer" prefHeight="25.0" prefWidth="139.0" text="Submit singleplayer">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <MenuBar layoutX="50.0" layoutY="2.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Game">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#replayGame" text="Replay" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
