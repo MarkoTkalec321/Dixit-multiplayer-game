@@ -3,12 +3,16 @@ Multiplayer game made in JavaFX
 
 ### Project Images
 
-<div style="display: flex; gap: 10px;">
-    <img src="Images_github/1.png" alt="Image 1" width="400" height="500" />
-    <img src="Images_github/2.png" alt="Image 2" width="600" height="500" />
-</div>
+![](Images_github/1.png)
 
-<div style="display: flex; gap: 10px;">
-    <img src="Images_github/3.png" alt="Image 1" width="500" height="500" />
-    <img src="Images_github/4.png" alt="Image 2" width="500" height="500" />
-</div>
+![](Images_github/2.png)
+
+![](Images_github/3.png)
+
+![](Images_github/4.png)
+
+![](Images_github/5.png)
+
+![](Images_github/6.png)
+
+![](Images_github/7.png)
